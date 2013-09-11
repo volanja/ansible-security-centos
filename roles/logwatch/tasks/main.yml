@@ -1,0 +1,6 @@
+---
+- name: Install logwatch
+  yum: pkg=logwatch state=installed
+
+- name: Copy logwatch.conf
+  template: src=logwatch.conf dest=/usr/share/logwatch/default.conf/logwatch.conf mode=0644

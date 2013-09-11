@@ -24,15 +24,19 @@ CentOS 6.4 64bit   (virtualbox + vagrantで構築)
 実行すること
 ------
 + yum update all
++ システムログ監視ソフトウェア(logwatch)のインストール
+
+テスト
+------
++ システムログ監視ソフトウェア(logwatch)のインストール
 
 TODO
 ------
 + ユーザの追加
 + rootログインの禁止
 + パスワード認証の禁止
-+ システムログ監視ソフトウェア(logwatch)のインストール
 
 参考資料
 -----
-[CentOS で行なっておきたいセキュリティ設定](http://fnya.cocolog-nifty.com/blog/2012/03/centos-6aa8.html)
+[CentOS で行なっておきたいセキュリティ設定](http://fnya.cocolog-nifty.com/blog/2012/03/centos-6aa8.html)  
 [VPS 借りたら、せめてこれくらいはやっとけというセキュリティ設定](http://dogmap.jp/2011/05/12/vps-security)
