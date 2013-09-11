@@ -1,0 +1,5 @@
+- name: Install xxx
+  hosts: server
+  user: root
+  roles:
+    - yum-update
