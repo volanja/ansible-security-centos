@@ -4,3 +4,9 @@
   roles:
     - yum-update
     - logwatch
+    - user
+  vars_prompt:
+    - name: "user_password"
+      prompt: "Enter password"
+      private: yes
+      confirm: yes

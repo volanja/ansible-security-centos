@@ -1,0 +1,3 @@
+---
+- name: Add User
+  user: name={{ new_user }} password={{ user_password }}
