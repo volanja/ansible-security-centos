@@ -25,14 +25,15 @@ CentOS 6.4 64bit   (virtualbox + vagrantで構築)
 ------
 + yum update all
 + システムログ監視ソフトウェア(logwatch)のインストール
++ ユーザの追加
 
 テスト
 ------
 + システムログ監視ソフトウェア(logwatch)のインストール
++ ユーザの追加
 
 TODO
 ------
-+ ユーザの追加
 + rootログインの禁止
 + パスワード認証の禁止
 
