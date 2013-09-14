@@ -7,7 +7,7 @@
     - user
   vars_prompt:
     - name: "user_password"
-      prompt: "Enter password"
+      prompt: "Enter User Password"
       private: yes
       confirm: yes
       encrypt: "md5_crypt"
