@@ -10,3 +10,6 @@
       prompt: "Enter password"
       private: yes
       confirm: yes
+      encrypt: "md5_crypt"
+      salt_size: 7
+      salt: "hlfiwaehs" 
