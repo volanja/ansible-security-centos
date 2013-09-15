@@ -26,16 +26,16 @@ CentOS 6.4 64bit   (virtualbox + vagrantで構築)
 + yum update all
 + システムログ監視ソフトウェア(logwatch)のインストール
 + ユーザの追加
+ - wheelグループに追加
+ - wheelグループのみroot化できるように修正
+ - suコマンドでwheelグループのみroot化できるように修正
+ - sudoコマンドでwheelグループのみ実行できるように修正
++ SSH rootログインの禁止
 
 テスト
 ------
 + システムログ監視ソフトウェア(logwatch)のインストール
 + ユーザの追加
-
-TODO
-------
-+ rootログインの禁止
-+ パスワード認証の禁止
 
 参考資料
 -----

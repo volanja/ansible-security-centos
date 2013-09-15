@@ -1,3 +1,32 @@
 ---
 - name: Add User
   user: name={{ new_user }} password={{ user_password }}
+
+- name: Join wheel
+  user: name={{ new_user }} groups=wheel append=yes
+
+- name: Edit /etc/pam.d/su
+  lineinfile: dest=/etc/pam.d/su state=present regexp='^#auth.*so use_uid$' insertafter='^#auth.*so use_uid$' line='auth            required        pam_wheel.so use_uid'
+
+- name: Edit /etc/login.defs
+  lineinfile: dest=/etc/login.defs state=present regexp='' insertafter=EOF line='SU_WHEEL_ONLY yes'
+
+- name: Add /etc/sudoers.d/wheel
+  template: src=wheel.j2 dest=/etc/sudoers.d/wheel mode=0440
+
+- name: Edit /etc/ssh/sshd_config for Deny Root Login
+  lineinfile: dest=/etc/ssh/sshd_config
+              state=present
+              regexp='^#PermitRootLogin yes$'
+              insertafter='^#PermitRootLogin yes$'
+              line='PermitRootLogin no'
+
+- name: Edit /etc/ssh/sshd_config for Any Pubkety Authentication
+  lineinfile: dest=/etc/ssh/sshd_config
+              state=present
+              regexp='^#PubkeyAuthentication yes'
+              insertafter='^#PubkeyAuthentication yes'
+              line='PubkeyAuthentication yes'
+
+- name: Restart sshd
+  service: name=sshd state=restarted

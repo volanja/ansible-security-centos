@@ -1,6 +1,7 @@
 - name: Install xxx
   hosts: server
-  user: root
+  user: vagrant
+  sudo: yes
   roles:
     - yum-update
     - logwatch
